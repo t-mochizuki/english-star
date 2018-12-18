@@ -1,0 +1,22 @@
+<div>
+  <p>{{ sentence }}</p>
+  <div>
+    <form v-on:submit.prevent="submit">
+      <input type="text" v-model="answer"/>
+      <button type="submit">submit</button>
+    </form>
+  </div>
+  <div>
+    <button v-on:click="listen">Listen</button>
+  </div>
+  <div class="question-pager">
+    <ul>
+      <li>
+        <router-link :to="`/question/${handlePrev()}`">Prev</router-link>
+      </li>
+      <li>
+        <router-link :to="`/question/${handleNext()}`">Next</router-link>
+      </li>
+    </ul>
+  </div>
+</div>

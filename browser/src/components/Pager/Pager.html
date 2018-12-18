@@ -1,0 +1,13 @@
+<div class="pager">
+  <ul>
+    <li>
+      <a href="#" v-on:click.prevent="handlePrev">Prev</a>
+    </li>
+    <li v-for="page in pages" v-bind:key="page">
+      <a href="#" v-on:click.prevent="handlePage(page)">{{page}}</a>
+    </li>
+    <li>
+      <a href="#" v-on:click.prevent="handleNext">Next</a>
+    </li>
+  </ul>
+</div>

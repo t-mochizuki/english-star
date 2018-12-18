@@ -1,0 +1,9 @@
+<div>
+  <p>Listen to the sentence and sumbit a hidden word.</p>
+  <ul>
+    <li v-for="item in ls" v-bind:key="item.id">
+      <router-link :to="`/question/${item.id}`">{{ item.id }}</router-link>
+    </li>
+  </ul>
+  <template><Pager v-bind:pages="pages"></Pager></template>
+</div>

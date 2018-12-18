@@ -1,0 +1,17 @@
+.pager {
+    position: fixed;
+    bottom: 0;
+}
+
+.pager ul {
+    list-style: none;
+}
+
+.pager ul li {
+    float: left;
+}
+
+.pager ul li a {
+    display: block;
+    padding: 0.6em 1em;
+}
