@@ -7,9 +7,13 @@ type Question struct {
 	Sentence string
 }
 
-var Questions [1]Question = [1]Question{
+var Questions [2]Question = [2]Question{
 	Question{
 		Word:     "This",
 		Sentence: "This is a pen.",
+	},
+	Question{
+		Word:     "That",
+		Sentence: "That is a pen.",
 	},
 }

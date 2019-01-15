@@ -33,20 +33,24 @@ export default Vue.component('Question', {
       return this.id - 1;
     },
     handleNext: function () {
-      if (1 <= this.id) return 1;
+      if (2 <= this.id) return 2;
       return Number(this.id) + 1;
-    }
+    },
+    onHandler: function () {
+      this.answer = '';
+      this.$store.dispatch({
+        type: 'question/callQuestionApi',
+        questionId: this.id
+      });
+    },
   },
   watch: {
-    id: {
-      handler() {
-        this.answer = '';
-        this.$store.dispatch({
-          type: 'question/callQuestionApi',
-          questionId: this.id
-        });
-      },
-      immediate: true
-    }
+    'id': [
+      {
+        handler: 'onHandler',
+        immediate: true,
+        deep: false
+      }
+    ]
   }
 })
